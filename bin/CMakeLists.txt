@@ -1,0 +1,6 @@
+add_executable(Index main_index.cpp)
+add_executable(Search main_search.cpp)
+target_link_libraries(Index PRIVATE search_engine)
+target_include_directories(Index PUBLIC ${PROJECT_SOURCE_DIR})
+target_link_libraries(Search PRIVATE search_engine)
+target_include_directories(Search PUBLIC ${PROJECT_SOURCE_DIR})
